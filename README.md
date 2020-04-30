@@ -16,6 +16,6 @@ There are currently only three settings that can be changed with config.php:
 * card1: The card ID to use when inserting a card into the reader. Must be a valid 16-character hex string, preferably starting with "E004" or "012E".
 
 ## To-do:
-* General code cleanup and commenting.
+* General code cleanup and commenting. This is more of a practice project than something that's meant to be useful to anyone, but all the better if anyone uses it.
 * Expand upon current features (P2 keypad, multiple card IDs etc.).
 * Add features for the other modules supported by the API.
