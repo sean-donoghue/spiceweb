@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  float: left;
+  position: fixed;
+  width: 180px;
+  height: 100%;
+  background-color: rgb(33,33,38);
+  border-style: none solid none none;
+  border-width: 1px;
+}
+
+.sidebar button {
+  background-color: inherit;
+  width: 100%;
+  padding: 28px;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar button:hover {
+  background-color: white;
+  color: black;
+}
+
+.keypad button {
+  background-color: inherit;
+  width: 100%;
+  padding: 30px;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.content {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  margin-left: 180px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-align: left;
+  background-color: rgb(48,48,48);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+a {
+  color: white;
+}
+
+hr {
+  width: 50%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(193,193,193);
+  font-family: verdana;
+  touch-action: pan-y;
+}
+
+h2 {
+  margin: 0;
+  color: white;
+}
+
+table, th, td, caption {
+  background-color: gray;
+  border: 1px solid white;
+  text-align: center;
+}
+
+caption {
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    float: none;
+    position: static;
+    width: 100%;
+  }
+  
+  .sidebar button {
+    display: inline-block;
+    width: 32%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .content {
+    position: static;
+    margin-left: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+  }
+  
+  .footer {
+    margin-left: 0px;
+  }
+  
+  body {
+    background-color: rgb(48,48,48);
+  }
+}
