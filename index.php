@@ -4,8 +4,9 @@
 <body>
   <?php
   include("includes/sidebar.php");
-
   $spiceapi = new SpiceApi($config["server"], $config["port"]);
+
+  // Only show main content pages if able to connect to SpiceTools
   if($spiceapi->connect()) {
     switch($_GET["page"]) {
       case "card":
@@ -27,8 +28,11 @@
         require("content/home.php");
         break;
     }
+
+    // Disconnect from SpiceTools after everything else has run
     $spiceapi->disconnect();
   } else {
+    // Shows when unable to connect to SpiceTools using the IP/port from config
     include("content/connect_error.php");
   }
 

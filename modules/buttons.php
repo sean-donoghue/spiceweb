@@ -1,17 +1,16 @@
 <?php
 function buttons_read($api) {
-		$request = new Request("buttons", "read");
-		$response = $api->execute($request->format());
-		return $response;
+  $api->set_request("buttons", "read");
+  return $api->send_request();
 }
 
 function  buttons_write($api, $params) {
-	$request = new Request("buttons", "write", $params);
-	$api->execute($request->format());
+  $api->set_request("buttons", "write", $params);
+  $api->send_request();
 }
 
 function  buttons_write_reset($api, $params=[]) {
-	$request = new Request("buttons", "write_reset", $params);
-	$api->execute($request->format());
+  $api->set_request("buttons", "write_reset", $params);
+  $api->send_request();
 }
 ?>

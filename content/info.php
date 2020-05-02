@@ -54,4 +54,4 @@ function info_print($info) {
     }
   }
   ?>
-  </div>
+</div>
