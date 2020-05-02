@@ -2,6 +2,49 @@
   box-sizing: border-box;
 }
 
+.keypad {
+  display: inline-table;
+  margin-right: 50px;
+}
+
+.keypad button {
+  background-color: inherit;
+  width: 100%;
+  padding: 30px;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.keypad table, th, td, caption {
+  background-color: gray;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.keypad caption {
+  padding: 20px;
+}
+
+.keypad table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+td.info-field {
+  width: 180px;
+  text-align: right;
+  padding: 10px;
+  background-color: rgb(33,33,38);
+}
+
+td.info-value {
+  width: 340px;
+  text-align: left;
+  padding: 10px;
+  background-color: rgb(33,33,38);
+}
+
 .sidebar {
   float: left;
   position: fixed;
@@ -26,15 +69,6 @@
 .sidebar button:hover {
   background-color: white;
   color: black;
-}
-
-.keypad button {
-  background-color: inherit;
-  width: 100%;
-  padding: 30px;
-  border: none;
-  color: white;
-  font-size: 16px;
 }
 
 .content {
@@ -80,21 +114,12 @@ h2 {
   color: white;
 }
 
-table, th, td, caption {
-  background-color: gray;
-  border: 1px solid white;
-  text-align: center;
-}
-
-caption {
-  padding: 20px;
-}
-
-table {
-  border-collapse: collapse;
-}
-
 @media only screen and (max-width: 600px) {
+  .keypad {
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
   .sidebar {
     float: none;
     position: static;
@@ -117,6 +142,7 @@ table {
   }
   
   .footer {
+    position: fixed;
     margin-left: 0px;
   }
   

@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("head.php"); ?>
+<?php include("includes/header.php"); ?>
 <body>
   <?php
-  include("sidebar.php");
-  $settings = include("config.php");
-  $spiceapi = new SpiceApi($settings["server"], $settings["port"]);
-  $status= "<span style='color: red;'>Offline</span>";
+  include("includes/sidebar.php");
+
+  $spiceapi = new SpiceApi($config["server"], $config["port"]);
   if($spiceapi->connect()) {
-    $status = "<span style='color: lime;'>Online</span>";
+    switch($_GET["page"]) {
+      case "card":
+        require("content/card.php");
+        break;
+      case "coin":
+        require("content/coin.php");
+        break;
+      case "info":
+        require("content/info.php");
+        break;
+      case "keypads":
+        require("content/keypads.php");
+        break;
+      case "buttons":
+        require("content/buttons.php");
+        break;
+      default:
+        require("content/home.php");
+        break;
+    }
     $spiceapi->disconnect();
+  } else {
+    include("content/connect_error.php");
   }
+
+  include("includes/footer.php");
   ?>
-  <div class="content">
-  <h2>SpiceTools API Web Client</h2>
-  <p>Welcome to the SpiceTools API Web Client! Choose an option from the sidebar to begin.</p>
-  <p>Current config is as follows:</p>
-  <ul>
-    <li>Server: <?php echo $settings["server"]; ?></lir>
-    <li>Port: <?php echo $settings["port"]; ?></li>
-    <li>Status: <?php echo $status; ?></li>
-  </ul>
-  </div>
-  <?php include("footer.php"); ?>
 </body>
 </html>

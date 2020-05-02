@@ -11,7 +11,7 @@ A web client for use with the API built into SpiceTools. You can demo the UI [he
 
 ## Config
 There are currently only three settings that can be changed with config.php:
-* server: The IP address or hostname of the machine running SpiceTools.
+* server: The IP address or hostname of the machine running SpiceTools. You can leave this as 127.0.0.1 or localhost if you're hosting this on the same machine as SpiceTools, e.g. with WAMP or XAMPP.
 * port: The port that the SpiceTools API is listening on.
 * card1: The card ID to use when inserting a card into the reader. Must be a valid 16-character hex string, preferably starting with "E004" or "012E".
 

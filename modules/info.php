@@ -19,17 +19,4 @@ function info_get($api, $function) {
 		return get_object_vars($response[0]);
 	}
 }
-
-function info_print($info) {
-	foreach($info as $field=>$value) {
-		if (!is_array($value)) {
-			echo "$field:<br>$value<br><br>";
-		} else {
-			echo "$field:<br>";
-			foreach($value as &$arg) {
-				echo "$arg ";
-			}
-		}
-	}
-}
 ?>

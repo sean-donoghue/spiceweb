@@ -1,0 +1,14 @@
+<?php
+include_once("modules/card.php");
+include_once("modules/coin.php");
+include_once("modules/info.php");
+include_once("modules/keypads.php");
+#include_once("modules/analogs.php");
+include_once("modules/buttons.php");
+#include_once("modules/lights.php");
+#include_once("modules/touch.php");
+#include_once("modules/control.php");
+#include_once("modules/memory.php");
+#include_once("modules/iidx.php");
+#include_once("modules/lcd.php");
+?>
