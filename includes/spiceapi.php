@@ -32,8 +32,7 @@ class SpiceApi {
 
   function send_request() {
     fwrite($this->connection,$this->request);
-    $data = json_decode(stream_get_line($this->connection, 0, "\x00"));
-    return $data->{"data"};
+    return json_decode(stream_get_line($this->connection, 0, "\x00"))->{"data"};
   }
 }
 ?>
