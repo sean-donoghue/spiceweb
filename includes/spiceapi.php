@@ -14,12 +14,12 @@ class SpiceApi {
   function connect() {
     error_reporting(1);
     if($this->connection = pfsockopen($this->server_ip,$this->port)) {
-        error_reporting(2);
-        return true;
-      } else {
-        error_reporting(2);
-        return false;
-      }
+      error_reporting(2);
+      return true;
+    } else {
+      error_reporting(2);
+      return false;
+    }
   }
 
   function disconnect() {
@@ -27,12 +27,12 @@ class SpiceApi {
   }
 
   function set_request($module, $function, array $params=[]) {
-    $this->request = json_encode(Array("id"=>1,"module"=>$module,"function"=>$function,"params"=>$params)) . "\x00";
+   $this->request = json_encode(Array("id"=>1,"module"=>$module,"function"=>$function,"params"=>$params)) . "\x00";
   }
 
   function send_request() {
-    fwrite($this->connection,$this->request);
-    return json_decode(stream_get_line($this->connection, 0, "\x00"))->{"data"};
+   fwrite($this->connection,$this->request);
+   return json_decode(stream_get_line($this->connection, 0, "\x00"))->{"data"};
   }
 }
 ?>

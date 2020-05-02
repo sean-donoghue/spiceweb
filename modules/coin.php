@@ -10,7 +10,7 @@ function coin_set($api, $amount=NULL) {
   } else {
     $api->set_request("coin", "set", $amount);
     $api->send_request();
-    }
+  }
 }
 
 function coin_insert($api, array $amount=[1]) {
