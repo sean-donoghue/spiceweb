@@ -5,7 +5,7 @@ A web client for use with the API built into SpiceTools. You can demo the UI [he
 * Connect to a running instance of SpiceTools that has the API enabled on a specified hostname/port.
 * Emulate inserting  coin(s) into the machine, and manage the queue of unprocessed coins.
 * Emulate inserting an eAmuse card into either card reader of the machine, using a card ID specified in the config.
-* Emulate presses on the numerical keypad (currently P1 side only) for entering PIN during login or accessing certain settings.
+* Emulate presses on the numerical keypad for entering PIN during login or accessing certain settings.
 * Send button presses to the machine from a list of valid inputs that dynamically populates according to the game that is currently running.
 * View information about the machine such as game information, SpiceTools version, launch arguments, and memory usage.
 
@@ -17,5 +17,5 @@ There are currently only three settings that can be changed with config.php:
 
 ## To-do:
 * General code cleanup and commenting. This is more of a practice project than something that's meant to be useful to anyone, but all the better if anyone uses it.
-* Expand upon current features (P2 keypad, multiple card IDs etc.).
+* Expand upon current features (multiple card IDs etc.).
 * Add features for the other modules supported by the API.
