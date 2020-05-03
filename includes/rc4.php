@@ -1,5 +1,4 @@
 <?php
-// Methods
 function rc4_ksa($key) {
   $sbox = range(0,255);
   $j = 0;
@@ -17,7 +16,7 @@ function rc4_ksa($key) {
 }
 
 function rc4_prga($sbox, $text) {
-  $input = utf8_decode($text);
+  $input = $text;
   $result = "";
   $i = 0;
   $j = 0;
@@ -44,7 +43,7 @@ function rc4_prga($sbox, $text) {
     $result .= chr($cipher_byte);
   }
 
-  return utf8_encode($result);
+  return $result;
 }
 
 function rc4($key, $text) {

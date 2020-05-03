@@ -5,6 +5,7 @@
   <?php
   include_once("config.php");
   include_once("includes/spiceapi.php");
+  include_once("includes/rc4.php");
   include_once("includes/modules.php");
   $incorrect_get_msg = "Incorrect argument(s) given, please try again.";
   ?>
