@@ -12,7 +12,7 @@ require_once("./modules/card.php");
     <li><a href='index.php?page=card&insert=p2'>Insert into P2 side</a></li>
   </ul>
   <?php
-  // Check $_GET parameters for valid choices
+  // Checks $_GET parameters for valid choices
   if (isset($_GET["insert"])) {
     switch($_GET["insert"]) {
       // "Insert into P1 side" chosen

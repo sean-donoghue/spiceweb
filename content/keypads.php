@@ -16,7 +16,7 @@ require_once("./modules/keypads.php");
   </p>
   <?php
 
-  // Get "player" as int, default to player 1 if not specified
+  // Gets "player" as int, defaults to player 1 if not specified
   $player_number = isset($_GET["player"]) ? (int)$_GET["player"] : 0;
 
   // Check $_GET parameters for valid choices

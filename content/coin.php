@@ -14,7 +14,7 @@ require_once("./modules/coin.php");
     <li><a href='./index.php?page=coin&action=reset'>Reset coin queue to 0</a></lir>
   </ul>
   <?php
-  // Check $_GET parameters for valid choices
+  // Checks $_GET parameters for valid choices
   if (isset($_GET["action"])) {
     switch($_GET["action"]) {
       // "Insert 1 coin" or "Insert 10 coins" chosen

@@ -30,7 +30,7 @@ function info_print($info) {
   </ul>
   <br>
   <?php
-  // Check $_GET parameters for valid choices
+  // Checks $_GET parameters for valid choices
   if(isset($_GET["info"])) {
     switch($_GET["info"]) {
       // "AVS" was chosen

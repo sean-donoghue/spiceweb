@@ -4,7 +4,7 @@
 <body>
   <?php
   include("includes/sidebar.php");
-  $spiceapi = new SpiceApi($config["server"], $config["port"]);
+  $spiceapi = new SpiceApi($config["server"], $config["port"], $config["password"]);
 
   // Only show main content pages if able to connect to SpiceTools
   if($spiceapi->connect()) {

@@ -10,10 +10,10 @@ require_once("./modules/buttons.php");
   // to obtain a list of all valid inputs as this is different for every game
   $button_status = buttons_read($spiceapi);
 
-  // Check $_GET parameters for valid choices
+  // Checks $_GET parameters for valid choices
   if(isset($_GET["button"])) {
 
-    // Assume the input doesn't exist until it is checked against the list returned by SpiceTools
+    // Assumes the input doesn't exist until it is checked against the list returned by SpiceTools
     $button_exists = false;
     foreach($button_status as &$button_array) {
       if ($_GET["button"] === $button_array[0]) {
@@ -21,7 +21,7 @@ require_once("./modules/buttons.php");
       }
     }
 
-    // Send the button press if it is confirmed to be valid
+    // Sends the button press if it is confirmed to be valid
     if ($button_exists) {
       buttons_write($spiceapi, [[$_GET["button"], 1]]);
 
