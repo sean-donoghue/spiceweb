@@ -4,9 +4,9 @@ A web client for use with the API built into SpiceTools. You can demo the UI [he
 ## Features
 * Connect to a running instance of SpiceTools that has the API enabled on a specified hostname/port.
 * Supports encrypted connections using a password that has been set in spicecfg.exe.
-* Emulate inserting coin(s) into the machine, and manage the queue of unprocessed coins.
-* Emulate inserting an eAmuse card into either card reader of the machine, using a card ID specified in the config.
-* Emulate presses on the numerical keypad for entering PIN during login or accessing certain game features.
+* Insert coin(s) into the machine, and query how many coins have yet to be processed by the machine.
+* Insert an eAmuse card into either card reader of the machine, using a card ID specified in the config.
+* Signal presses on the numerical keypad for entering PIN during login or accessing certain game features.
 * Send button presses to the machine from a list of valid inputs that dynamically populates according to the game that is currently running.
 * View information about the machine such as game information, SpiceTools version, launch arguments, and memory usage.
 
