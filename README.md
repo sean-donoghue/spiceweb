@@ -1,5 +1,5 @@
 # spiceweb
-A web client for use with the API built into SpiceTools. You can demo the UI [here](https://www.sean-donoghue.com/spiceweb-demo/) to see how it works.
+A web client for use with the API built into SpiceTools. You can demo the UI [here](#) (currently down) to see how it works.
 
 ## Features
 * Connect to a running instance of SpiceTools that has the API enabled on a specified hostname/port.
